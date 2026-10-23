@@ -1,0 +1,18 @@
+.tech-stack-card {
+    aspect-ratio: 1;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px rgb(24, 24, 24);
+}
+
+.tech-stack-card > img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+}

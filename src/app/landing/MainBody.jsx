@@ -1,8 +1,8 @@
-import React from 'react'
 import rightArrow from '../../assets/right-arrow.svg'
 import ProjectCard from '../../components/ProjectCard.jsx'
 import './MainBody.css'
 import YellowBorder from '../../components/YellowBorder.jsx'
+import TechStackCard from '../../components/TechStackCard.jsx'
 
 
 const MainBody = () => {
@@ -26,6 +26,18 @@ const MainBody = () => {
       imgUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1920px-Airbnb_Logo_B%C3%A9lo.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       githubLink: "https://www.airbnb.co.in/"
     }
+  ]
+
+  const techStackList = [
+    {name : "React", imgUrl :"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"},
+    {name : "Node.js", imgUrl :"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"},
+    {name : "Express.js", imgUrl : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"},
+    {name : "JavaScript", imgUrl : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"},
+    {name : "Kafka", imgUrl : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg"},
+    {name : "Redis", imgUrl : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"},
+    {name : "Docker", imgUrl : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"},
+    {name : "Kubernetes", imgUrl : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg"},
+    {name : "AWS", imgUrl : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"}
   ]
 
   return (
@@ -52,6 +64,16 @@ const MainBody = () => {
         <div className="project-container">
           {projectList.map(project=> <ProjectCard {...project} key= {project.title}/>)}
         </div>
+
+    </section>
+
+    <section className="tech-stack-section">
+      <h2>Technologies that I know</h2>
+      <p className="tech-stack-description">I have listed some of my top skills here, I know more of course!</p>
+
+      <div className="tech-stack-container">
+        {techStackList.map(techStack => <TechStackCard {...techStack} key={techStack.name}/>)}
+      </div>
 
     </section>
 
